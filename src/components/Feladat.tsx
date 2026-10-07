@@ -1,13 +1,14 @@
-import React from 'react'
-import type { AllapotTipus, TodoTipus } from '../adat'
+import type { TodoTipus } from '../adat'
 import './css/Feladat.css'
+import { useTodoContext } from '../contexts/TodoContexts'
 
 interface feladatokProps{
   elem: TodoTipus,
-  setAllapot:(index:number,allapot:AllapotTipus)=>void
   index:number
 }
-function Feladat({elem, setAllapot, index} : feladatokProps) {
+
+function Feladat({elem, index} : feladatokProps) {
+  const {setAllapot}=useTodoContext()
   return (
     <div className='feladat'>
         <h3>{elem.tennivalo}</h3>

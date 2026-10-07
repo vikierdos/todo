@@ -1,17 +1,13 @@
-import React from 'react'
 import Feladat from './Feladat'
-import type { AllapotTipus, TodoTipus } from '../adat'
 import './css/Feladatok.css'
+import {useTodoContext } from '../contexts/TodoContexts'
 
-interface feladatokProps{
-  lista: TodoTipus[],
-  setAllapot:(index:number,allapot:AllapotTipus)=>void
-}
+function Feladatok() {
+  const {lista}=useTodoContext()
 
-function Feladatok({lista, setAllapot} : feladatokProps) {
   return (
     <div className='feladatok'>
-      {lista.map((e,i)=>(<Feladat key={e.id} elem={e} index={i} setAllapot={setAllapot} />))}
+      {lista.map((e,i)=>(<Feladat key={e.id} elem={e} index={i} />))}
     </div>
   )
 }
