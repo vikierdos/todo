@@ -1,0 +1,97 @@
+.feladat {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid #e8dcff;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 12px 28px rgba(97, 72, 156, 0.08);
+}
+
+.feladat h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #2d1b48;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.feladat p {
+  margin: 0;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: #f2eaff;
+  color: #6542b5;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: lowercase;
+  white-space: nowrap;
+}
+
+.feladat .actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: nowrap;
+  margin-left: auto;
+}
+
+.feladat button {
+  border: none;
+  border-radius: 10px;
+  padding: 7px 9px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  background: #f3eeff;
+  color: #5b3ca3;
+  white-space: nowrap;
+}
+
+.feladat button:hover {
+  transform: translateY(-1px);
+}
+
+.feladat button:active {
+  transform: translateY(0);
+}
+
+.feladat button:nth-child(1) {
+  background: #eaf9ee;
+  color: #1f7b4d;
+}
+
+.feladat button:nth-child(2) {
+  background: #f1eaff;
+  color: #6542b5;
+}
+
+.feladat button:nth-child(3) {
+  background: #fbeaea;
+  color: #b54848;
+}
+
+.feladat button:nth-child(4) {
+  background: #f4f1fb;
+  color: #5d4a9a;
+}
+
+@media (max-width: 640px) {
+  .feladat {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .feladat .actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-left: 0;
+  }
+}
